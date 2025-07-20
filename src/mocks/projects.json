@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "Buscador de películas",
-      "image": "/images/movie_page.webp",
+      "image": "images/movie_page.webp",
       "description": "Desarrollado con React, HTML y CSS. Se dio uso de una API para poder realizar la búsqueda de películas.",
       "urls": {
         "code": "https://github.com/HottaIssa/react-movie-search",
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "title": "Pomodoro App",
-      "image": "  /images/pomodoro_app.webp",
+      "image": "images/pomodoro_app.webp",
       "description": "Desarrollado con HTML, CSS y JS. The Pomodoro App es un temporizador en intervalos de 25 minutos, inspirado por la técnica Pomodoro.",
       "urls": {
         "code": "https://github.com/HottaIssa/pomodoro-app",
@@ -23,7 +23,7 @@
     {
       "id": 3,
       "title": "Concentration Grid Game",
-      "image": "/images/concentration_grid.webp",
+      "image": "images/concentration_grid.webp",
       "description": "Desarrollado con HTML, CSS y JS. Pone a prueba tu concentración, resolviendo el juego en el menor tiempo posible.",
       "urls": {
         "code": "https://github.com/HottaIssa/js-concentration-game",
