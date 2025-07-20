@@ -1,0 +1,39 @@
+---
+import CardProject from '../components/CardProject.astro'
+import { projects } from '../mocks/projects.json'
+---
+
+<section
+  class='flex justify-center p-6 my-6 text-[#e0e1dd] scroll-mt-16'
+  id='project-section'
+>
+  <div class='flex flex-col gap-8 items-center p-4'>
+    <h2 class='text-5xl font-bold text-shadow-md text-shadow-sky-200'>
+      Proyectos
+    </h2>
+    <div
+      class='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-4'
+    >
+      {
+        projects.map((project) => (
+          <CardProject
+            id={project.id}
+            title={project.title}
+            image={project.image}
+            description={project.description}
+            code={project.urls.code}
+            page={project.urls.page}
+          />
+        ))
+      }
+    </div>
+    <button>
+      <a
+        href='https://github.com/HottaIssa'
+        class='hover:underline underline xl:no-underline transition duration-300 ease-in-out'
+      >
+        Ver más proyectos
+      </a>
+    </button>
+  </div>
+</section>

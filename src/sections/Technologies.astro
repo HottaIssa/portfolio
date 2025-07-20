@@ -1,0 +1,64 @@
+---
+import CardTechnology from '../components/CardTechnology.astro'
+import IconName from '../components/IconName.astro'
+---
+
+<section
+  class='flex flex-col items-center justify-center gap-8 p-4 pb-14 relative my-6 text-[#e0e1dd] scroll-mt-16'
+  id='tech-section'
+>
+  <h2 class='text-5xl font-bold text-shadow-md text-shadow-sky-200'>
+    Tecnologias
+  </h2>
+  <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+    <CardTechnology name='Frontend'>
+      <IconName name='HTML'>
+        <img src='/icons/html.svg' alt='HTML Icon' class='w-12 h-12' />
+      </IconName>
+      <IconName name='CSS'>
+        <img src='/icons/css.svg' alt='CSS Icon' class='w-12 h-12' />
+      </IconName>
+      <IconName name='JavaScript'>
+        <img src='/icons/js.svg' alt='JavaScript Icon' class='w-12 h-12' />
+      </IconName>
+      <IconName name='Astro'>
+        <img src='/icons/astro.svg' alt='Astro Icon' class='w-12 h-12' />
+      </IconName>
+      <IconName name='React'>
+        <img src='/icons/react.svg' alt='React Icon' class='w-12 h-12' />
+      </IconName>
+    </CardTechnology>
+    <CardTechnology name='Backend'>
+      <IconName name='Node'>
+        <img src='/icons/node.svg' alt='Node.js Icon' class='w-12 h-12' />
+      </IconName>
+      <IconName name='PHP'>
+        <img src='/icons/php.svg' alt='PHP Icon' class='w-12 h-12' />
+      </IconName>
+      <IconName name='PostgreSQL'>
+        <img
+          src='/icons/postgresql.svg'
+          alt='PostgreSQL Icon'
+          class='w-12 h-12'
+        />
+      </IconName>
+      <IconName name='MySQL'>
+        <img src='/icons/mysql.svg' alt='MySQL Icon' class='w-12 h-12' />
+      </IconName>
+      <IconName name='MongoDB'>
+        <img src='/icons/mongodb.svg' alt='MongoDB Icon' class='w-12 h-12' />
+      </IconName>
+    </CardTechnology>
+    <CardTechnology name='Others'>
+      <IconName name='Java'>
+        <img src='/icons/java.svg' alt='Java Icon' class='w-12 h-12' />
+      </IconName>
+      <IconName name='Python'>
+        <img src='/icons/python.svg' alt='Python Icon' class='w-12 h-12' />
+      </IconName>
+      <IconName name='Flutter'>
+        <img src='/icons/flutter.svg' alt='Flutter Icon' class='w-12 h-12' />
+      </IconName>
+    </CardTechnology>
+  </div>
+</section>

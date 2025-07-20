@@ -1,0 +1,102 @@
+<div
+  class='flex flex-col items-center justify-center gap-8 p-12 pb-14 relative my-6 text-[#e0e1dd] scroll-mt-16'
+  id='contact-section'
+>
+  <h2 class='text-5xl font-bold text-shadow-md text-shadow-sky-200'>
+    Contacto
+  </h2>
+  <form
+    method='POST'
+    id='contact-form'
+    class='flex flex-col gap-4 w-full max-w-md'
+  >
+    <label
+      for='name'
+      class="font-bold after:ml-0.5 after:text-red-500 after:content-['*']"
+      >Nombre</label
+    >
+    <input
+      class='border border-[ #415a77] rounded p-2 bg-[#1b263b] text-[#e0e1dd] focus:outline-2 focus:outline-[#778da9] focus:shadow-lg focus:shadow-[#415a77] transition-shadow duration-300 ease-in-out'
+      type='text'
+      id='name'
+      name='name'
+      placeholder='Ingrese su nombre'
+      autocomplete='off'
+      required
+    />
+    <label
+      for='email'
+      class="font-bold after:ml-0.5 after:text-red-500 after:content-['*']"
+      >Correo electrónico</label
+    >
+    <input
+      class='border border-[ #415a77] rounded p-2 bg-[#1b263b] text-[#e0e1dd] focus:outline-2 focus:outline-[#778da9] focus:shadow-lg focus:shadow-[#415a77] transition-shadow duration-300 ease-in-out'
+      type='email'
+      id='email'
+      name='email'
+      placeholder='Ingrese su correo electrónico'
+      autocomplete='off'
+      required
+    />
+
+    <label
+      for='message'
+      class="font-bold after:ml-0.5 after:text-red-500 after:content-['*']"
+      >Mensaje</label
+    >
+    <textarea
+      class='border border-[ #415a77] rounded p-2 bg-[#1b263b] text-[#e0e1dd] focus:outline-2 focus:outline-[#778da9] focus:shadow-lg focus:shadow-[#415a77] transition-shadow duration-300 ease-in-out'
+      id='message'
+      name='message'
+      rows='10'
+      placeholder='Ingrese su mensaje'
+      autocomplete='nope'
+      required></textarea>
+
+    <button
+      id='submit-button'
+      class='bg-[#415a77] rounded p-2 font-bold hover:bg-[#778da9] hover:text-[#1b263b] transition-colors duration-300 shadow-lg shadow-[#415a77] ease-in-out border-solid border-1 border-[#778da9]'
+      type='submit'>Enviar</button
+    >
+  </form>
+  <script
+    type='text/javascript'
+    src='https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js'
+  ></script>
+
+  <script type='text/javascript'>
+    emailjs.init('iI1RHd0ZTqaTsaLoE')
+  </script>
+</div>
+
+<script>
+  const btn = document.getElementById('submit-button') as HTMLButtonElement
+  const name = document.getElementById('name') as HTMLInputElement
+  const email = document.getElementById('email') as HTMLInputElement
+  const message = document.getElementById('message') as HTMLTextAreaElement
+
+  document
+    .getElementById('contact-form')
+    ?.addEventListener('submit', function (event) {
+      event.preventDefault()
+
+      btn.value = 'Enviando...'
+
+      const serviceID = 'default_service'
+      const templateID = 'template_q4e9vn7'
+
+      emailjs.sendForm(serviceID, templateID, this).then(
+        () => {
+          btn.value = 'Enviar'
+          name.value = ''
+          email.value = ''
+          message.value = ''
+          alert('¡Mensaje enviado!')
+        },
+        (err) => {
+          btn.value = 'Enviar'
+          alert(JSON.stringify(err))
+        }
+      )
+    })
+</script>

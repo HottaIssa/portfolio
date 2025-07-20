@@ -1,0 +1,25 @@
+---
+import './src/styles/global.css'
+---
+
+<!doctype html>
+<html lang='en' class='scroll-smooth dark'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/icons/page_icon.png' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Issa Ostos Hotta</title>
+  </head>
+  <body class='min-h-full bg-[#0d1b2a] m-0 p-0'>
+    <slot />
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+  }
+</style>
